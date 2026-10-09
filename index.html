@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabin Nusantara Ice Cream</title>
+    <!-- Font Kekinian -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Latar Belakang Ambient Animasi -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <!-- Custom Toast -->
+    <div id="custom-toast" class="toast">Notifikasi</div>
+
+    <main id="app-content">
+        <!-- 1. HOME VIEW -->
+        <section id="view-home" class="section-view active">
+            <div class="top-header">
+                <div class="gabin-icon-circle">
+                    <i class="fas fa-cookie-bite" style="font-size: 2.8rem; color: #ff7b89;"></i>
+                </div>
+            </div>
+            
+            <div class="hero-titles">
+                <h1 class="title-gabin">Gabin</h1>
+                <h1 class="title-icecream">Nusantara</h1>
+                <p class="subtitle">Local Flavors, In One Bite</p>
+            </div>
+
+            <div class="glass-card mt-20 hero-card">
+                <h2>Bukan Es krim Biasa ✨</h2>
+                <p>Nikmati perpaduan biskuit dan es krim dengan cita rasa Nusantara dalam setiap gigitan</p>
+                <button class="btn-primary mt-15" onclick="pindahTab('view-menu', 'nav-menu')">
+                    Lihat Menu <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- 2. MENU VIEW -->
+        <section id="view-menu" class="section-view">
+            <div class="header-section">
+                <span class="badge-title">🌟 Paling Laris</span>
+                <h2 class="section-title">Our Flavors</h2>
+            </div>
+            
+            <div class="menu-grid">
+                <div class="glass-card menu-card">
+                    <img src="es teler.jpeg" alt="Es Teler" class="menu-img">
+                    <div class="menu-info">
+                        <h3>Es Teler</h3><p class="price">Rp 12.000</p>
+                    </div>
+                    <button class="btn-add" onclick="pesanViaGForm()">Pesan <i class="fas fa-external-link-alt" style="font-size:0.8rem; margin-left:5px;"></i></button>
+                </div>
+                
+                <div class="glass-card menu-card">
+                    <img src="es doger.jpeg" alt="Es Doger" class="menu-img">
+                    <div class="menu-info">
+                        <h3>Es Doger</h3><p class="price">Rp 12.000</p>
+                    </div>
+                    <button class="btn-add" onclick="pesanViaGForm()">Pesan <i class="fas fa-external-link-alt" style="font-size:0.8rem; margin-left:5px;"></i></button>
+                </div>
+
+                <div class="glass-card menu-card">
+                    <img src="martabak.jpeg" alt="Martabak" class="menu-img">
+                    <div class="menu-info">
+                        <h3>Martabak</h3><p class="price">Rp 12.000</p>
+                    </div>
+                    <button class="btn-add" onclick="pesanViaGForm()">Pesan <i class="fas fa-external-link-alt" style="font-size:0.8rem; margin-left:5px;"></i></button>
+                </div>
+
+                <div class="glass-card menu-card">
+                    <img src="klepon.jpeg" alt="Klepon" class="menu-img">
+                    <div class="menu-info">
+                        <h3>Klepon</h3><p class="price">Rp 12.000</p>
+                    </div>
+                    <button class="btn-add" onclick="pesanViaGForm()">Pesan <i class="fas fa-external-link-alt" style="font-size:0.8rem; margin-left:5px;"></i></button>
+                </div>
+
+                <div class="glass-card menu-card">
+                    <img src="jasuke.jpeg" alt="Jasuke" class="menu-img">
+                    <div class="menu-info">
+                        <h3>Jasuke</h3><p class="price">Rp 12.000</p>
+                    </div>
+                    <button class="btn-add" onclick="pesanViaGForm()">Pesan <i class="fas fa-external-link-alt" style="font-size:0.8rem; margin-left:5px;"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PROMO VIEW -->
+        <section id="view-promo" class="section-view">
+            <div class="header-section">
+                <span class="badge-title">🎁 Spesial Hari Ini</span>
+                <h2 class="section-title">Deals & Offers</h2>
+            </div>
+            
+            <div class="glass-card promo-card info-only">
+                <div class="promo-text">
+                    <h3>Paket Double (Buy 2)</h3>
+                    <p class="price">Harga Spesial</p>
+                    <p class="promo-desc">*Berlaku otomatis untuk pemesanan via GForm & Booth kami</p>
+                </div>
+            </div>
+            
+            <div class="glass-card promo-card info-only">
+                <div class="promo-text">
+                    <h3>Paket Triple (Buy 3)</h3>
+                    <p class="price">Harga Spesial</p>
+                    <p class="promo-desc">*Berlaku otomatis untuk pemesanan via GForm & Booth kami</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. RATE VIEW -->
+        <section id="view-rate" class="section-view">
+            <div class="header-section">
+                <span class="badge-title">❤️ Suara Konsumen</span>
+                <h2 class="section-title">Rate Gabin</h2>
+            </div>
+            <div class="glass-card text-center mx-20">
+                <p style="font-weight:600; color:#4a2c1b;">Berapa bintang untuk Gabin kami?</p>
+                <div class="stars-interactive" id="star-rating">
+                    <i class="fas fa-star" onclick="setBintang(1)"></i>
+                    <i class="fas fa-star" onclick="setBintang(2)"></i>
+                    <i class="fas fa-star" onclick="setBintang(3)"></i>
+                    <i class="fas fa-star" onclick="setBintang(4)"></i>
+                    <i class="fas fa-star" onclick="setBintang(5)"></i>
+                </div>
+                <input type="text" id="reviewer-name" placeholder="Nama panggilanmu..." class="input-glass">
+                <textarea id="review-text" placeholder="Gimana rasa gabinnya? Ceritain dong..."></textarea>
+                <button class="btn-primary" onclick="submitReview()">Kirim Review</button>
+            </div>
+
+            <div id="review-list" class="mt-20">
+                <!-- Review LocalStorage -->
+            </div>
+        </section>
+
+        <!-- 5. VOTE VIEW -->
+        <section id="view-vote" class="section-view">
+            <div class="header-section">
+                <span class="badge-title">💡 Flavor Lab</span>
+                <h2 class="section-title">Vote Next Menu</h2>
+            </div>
+            <div class="glass-card vote-box text-center mx-20">
+                <div class="vote-item">
+                    <h4>🍓 Strawberry Cheesecake</h4>
+                    <div class="progress-bar"><div id="bar-straw" class="progress" style="width: 50%;">50%</div></div>
+                    <button class="btn-vote" onclick="prosesVote('straw')">Pilih Ini</button>
+                </div>
+                <div class="vs-badge">VS</div>
+                <div class="vote-item">
+                    <h4>🍫 Choco Hazelnut</h4>
+                    <div class="progress-bar"><div id="bar-choco" class="progress choco" style="width: 50%;">50%</div></div>
+                    <button class="btn-vote choco-btn" onclick="prosesVote('choco')">Pilih Ini</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SOCIAL VIEW -->
+        <section id="view-social" class="section-view">
+            <div class="header-section">
+                <span class="badge-title">📸 Tag Kami</span>
+                <h2 class="section-title">#GabinMoments</h2>
+            </div>
+            <div class="gallery">
+                <img src="es teler.jpeg" class="foto-moment" alt="Moment 1">
+                <img src="es doger.jpeg" class="foto-moment" alt="Moment 2">
+                <img src="martabak.jpeg" class="foto-moment" alt="Moment 3">
+                <img src="klepon.jpeg" class="foto-moment" alt="Moment 4">
+                <img src="jasuke.jpeg" class="foto-moment" alt="Moment 5">
+            </div>
+            <div class="mx-20">
+                <a href="https://chat.whatsapp.com/KODE_GRUP_WA" target="_blank" class="btn-wa" style="text-decoration:none;">
+                    <i class="fab fa-whatsapp"></i> Gabung Grup Komunitas
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FLOATING WHATSAPP BUTTON ADMIN -->
+    <button onclick="hubungiAdmin()" id="floating-wa">
+        <i class="fab fa-whatsapp"></i>
+    </button>
+
+    <!-- FLOATING BOTTOM NAVIGATION -->
+    <div class="nav-container">
+        <nav class="bottom-nav">
+            <div class="nav-item active" id="nav-home" onclick="pindahTab('view-home', 'nav-home')">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="nav-item" id="nav-menu" onclick="pindahTab('view-menu', 'nav-menu')">
+                <i class="fas fa-border-all"></i>
+            </div>
+            <div class="nav-item" id="nav-promo" onclick="pindahTab('view-promo', 'nav-promo')">
+                <i class="fas fa-ticket-alt"></i>
+            </div>
+            <div class="nav-item" id="nav-rate" onclick="pindahTab('view-rate', 'nav-rate')">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="nav-item" id="nav-vote" onclick="pindahTab('view-vote', 'nav-vote')">
+                <i class="fas fa-flask"></i>
+            </div>
+            <div class="nav-item" id="nav-social" onclick="pindahTab('view-social', 'nav-social')">
+                <i class="fas fa-users"></i>
+            </div>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<script src="script.js" charset="utf-8"></script>
