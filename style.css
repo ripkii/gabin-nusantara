@@ -99,9 +99,12 @@ textarea:focus, .input-glass:focus { border-color: #ff7b89; background: white; b
 .vs-badge { background: #4a2c1b; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Fredoka'; font-weight: 700; margin: 15px auto; box-shadow: 0 4px 10px rgba(74,44,27,0.2); }
 .progress-bar { background: rgba(255,255,255,0.8); border-radius: 20px; height: 28px; width: 100%; margin: 12px 0; overflow: hidden; border: 1px solid white; }
 .progress { background: #ff7b89; height: 100%; color: white; font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; justify-content: center; transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-.progress.choco { background: #8c6a58; }
+
+/* --- PERUBAHAN WARNA UNTUK KAYU MANIS --- */
+.progress.kayumanis { background: #b07d54; } /* Warna cokelat rempah kayu manis */
 .btn-vote { background: white; color: #ff7b89; border: none; padding: 12px 24px; border-radius: 16px; font-weight: 700; font-size:1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(255,123,137,0.1); width: 100%; font-family: 'Plus Jakarta Sans'; }
-.choco-btn { color: #8c6a58; box-shadow: 0 4px 12px rgba(140,106,88,0.1); }
+.kayumanis-btn { color: #b07d54; box-shadow: 0 4px 12px rgba(176,125,84,0.1); }
+/* ---------------------------------------- */
 
 .gallery { display: flex; gap: 16px; overflow-x: auto; padding: 10px 20px 20px; scroll-snap-type: x mandatory; }
 .foto-moment { min-width: 240px; height: 240px; object-fit: cover; border-radius: 24px; scroll-snap-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
@@ -138,8 +141,7 @@ textarea:focus, .input-glass:focus { border-color: #ff7b89; background: white; b
     justify-content: center; 
     box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); 
     z-index: 999; 
-    border: none; /* Pastikan ini ada */
-    cursor: pointer; /* Pastikan ini ada */
+    text-decoration: none;
     transition: transform 0.2s; 
 }
 #floating-wa:active { transform: scale(0.9); }
@@ -147,4 +149,20 @@ textarea:focus, .input-glass:focus { border-color: #ff7b89; background: white; b
     #floating-wa {
         right: calc(50% - 240px + 25px); 
     }
+}
+/* --- STYLE UNTUK ICON FLAVOR LAB --- */
+.flavor-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+.icon-flavor {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%; /* Membuat gambar kotak jadi bulat sempurna */
+    object-fit: cover; /* Mencegah gambar gepeng */
+    border: 2px solid white;
+    box-shadow: 0 4px 10px rgba(122, 90, 74, 0.15);
 }

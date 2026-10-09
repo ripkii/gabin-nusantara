@@ -21,8 +21,6 @@ function pindahTab(viewId, navId) {
 function pesanViaGForm() {
     // ⚠️ Ganti link ini dengan Link Google Form Klien Lu ⚠️
     const linkGForm = "https://forms.gle/CONTOH_LINK_FORM_KAMU_DISINI";
-    
-    // Ini buat buka tab baru ke GForm
     window.open(linkGForm, '_blank');
 }
 
@@ -79,31 +77,31 @@ function tampilkanReview() {
 }
 
 
-// --- VOTING FLAVOR LAB (Tersimpan di Browser) ---
-let voteData = JSON.parse(localStorage.getItem('gabinVotesNew')) || { straw: 15, choco: 10 };
+// --- VOTING FLAVOR LAB (DIUBAH KE NASTAR VS KAYU MANIS) ---
+// Pakai key 'gabinVotesNastar' supaya hasil vote lama ke-reset
+let voteData = JSON.parse(localStorage.getItem('gabinVotesNastar')) || { nastar: 15, kayumanis: 10 };
 
 function prosesVote(pilihan) {
     voteData[pilihan] += 1;
-    localStorage.setItem('gabinVotesNew', JSON.stringify(voteData));
+    localStorage.setItem('gabinVotesNastar', JSON.stringify(voteData));
     updateVoteUI();
     showToast('Yay! Pilihanmu berhasil disave. 💡');
 }
 
 function updateVoteUI() {
-    let totalVotes = voteData.straw + voteData.choco;
+    let totalVotes = voteData.nastar + voteData.kayumanis;
     if(totalVotes === 0) return; 
 
-    let percentStraw = Math.round((voteData.straw / totalVotes) * 100);
-    let percentChoco = 100 - percentStraw; 
+    let percentNastar = Math.round((voteData.nastar / totalVotes) * 100);
+    let percentKayuManis = 100 - percentNastar; 
 
-    const barStraw = document.getElementById('bar-straw');
-    const barChoco = document.getElementById('bar-choco');
-
-    barStraw.style.width = percentStraw + '%';
-    barStraw.innerText = percentStraw + '%';
+    // Update Bar Nastar
+    document.getElementById('bar-nastar').style.width = percentNastar + '%';
+    document.getElementById('bar-nastar').innerText = percentNastar + '%';
     
-    barChoco.style.width = percentChoco + '%';
-    barChoco.innerText = percentChoco + '%';
+    // Update Bar Kayu Manis
+    document.getElementById('bar-kayumanis').style.width = percentKayuManis + '%';
+    document.getElementById('bar-kayumanis').innerText = percentKayuManis + '%';
 }
 
 // Render Review dan Vote pas pertama web dibuka
@@ -111,14 +109,3 @@ window.onload = () => {
     tampilkanReview();
     updateVoteUI();
 };
-// --- HUBUNGI ADMIN VIA WA ---
-function hubungiAdmin() {
-    const noWA = "6282320060075"; // Ganti dengan nomor Admin
-    
-    // Kode \uD83D\uDE0A adalah sistem baca untuk emoji 😊 (dijamin gak akan error  lagi)
-    const pesan = "Halo Admin Gabin Nusantara!\nSaya mau tanya tentang menu dan promo Gabin Nusantara, yaa \uD83D\uDE0A";
-    
-    const url = `https://api.whatsapp.com/send?phone=${noWA}&text=${encodeURIComponent(pesan)}`;
-    
-    window.open(url, '_blank');
-}

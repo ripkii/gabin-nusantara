@@ -23,8 +23,9 @@
         <!-- 1. HOME VIEW -->
         <section id="view-home" class="section-view active">
             <div class="top-header">
-                <div class="gabin-icon-circle">
-                    <i class="fas fa-cookie-bite" style="font-size: 2.8rem; color: #ff7b89;"></i>
+                <!-- Lingkaran bawaan kita hilangkan agar logo asli klien bisa tampil maksimal -->
+                <div class="gabin-icon-circle" style="background: transparent; border: none; box-shadow: none; width: auto; height: auto;">
+                    <img src="Logo.jpeg" alt="Logo Gabin Nusantara" style="width: 180px; height: 180px; object-fit: contain;">
                 </div>
             </div>
             
@@ -35,7 +36,7 @@
             </div>
 
             <div class="glass-card mt-20 hero-card">
-                <h2>Bukan Es krim Biasa ✨</h2>
+                <h2>Bukan Es Krim Biasa ✨</h2>
                 <p>Nikmati perpaduan biskuit dan es krim dengan cita rasa Nusantara dalam setiap gigitan</p>
                 <button class="btn-primary mt-15" onclick="pindahTab('view-menu', 'nav-menu')">
                     Lihat Menu <i class="fas fa-arrow-right"></i>
@@ -142,7 +143,7 @@
             </div>
         </section>
 
-        <!-- 5. VOTE VIEW -->
+        <!-- 5. VOTE VIEW (SUDAH DIUBAH KE NASTAR & KAYU MANIS) -->
         <section id="view-vote" class="section-view">
             <div class="header-section">
                 <span class="badge-title">💡 Flavor Lab</span>
@@ -150,15 +151,17 @@
             </div>
             <div class="glass-card vote-box text-center mx-20">
                 <div class="vote-item">
-                    <h4>🍓 Strawberry Cheesecake</h4>
-                    <div class="progress-bar"><div id="bar-straw" class="progress" style="width: 50%;">50%</div></div>
-                    <button class="btn-vote" onclick="prosesVote('straw')">Pilih Ini</button>
+                    <h4 class="flavor-title"><img src="nastar.jpeg" class="icon-flavor" alt="Nastar"> Nastar</h4>
+                    <div class="progress-bar"><div id="bar-nastar" class="progress" style="width: 50%;">50%</div></div>
+                    <button class="btn-vote" onclick="prosesVote('nastar')">Pilih Ini</button>
                 </div>
+                
                 <div class="vs-badge">VS</div>
+                
                 <div class="vote-item">
-                    <h4>🍫 Choco Hazelnut</h4>
-                    <div class="progress-bar"><div id="bar-choco" class="progress choco" style="width: 50%;">50%</div></div>
-                    <button class="btn-vote choco-btn" onclick="prosesVote('choco')">Pilih Ini</button>
+                    <h4 class="flavor-title"><img src="Kayu Manis.jpeg" class="icon-flavor" alt="Kayu Manis"> Kayu Manis</h4>
+                    <div class="progress-bar"><div id="bar-kayumanis" class="progress kayumanis" style="width: 50%;">50%</div></div>
+                    <button class="btn-vote kayumanis-btn" onclick="prosesVote('kayumanis')">Pilih Ini</button>
                 </div>
             </div>
         </section>
@@ -170,11 +173,11 @@
                 <h2 class="section-title">#GabinMoments</h2>
             </div>
             <div class="gallery">
-                <img src="es teler.jpeg" class="foto-moment" alt="Moment 1">
-                <img src="es doger.jpeg" class="foto-moment" alt="Moment 2">
+                <img src="es doger.jpeg" class="foto-moment" alt="Moment 1">
+                <img src="es teler.jpeg" class="foto-moment" alt="Moment 2">
                 <img src="martabak.jpeg" class="foto-moment" alt="Moment 3">
                 <img src="klepon.jpeg" class="foto-moment" alt="Moment 4">
-                <img src="jasuke.jpeg" class="foto-moment" alt="Moment 5">
+                <img src="jasuke.jpeg" class="foto-moment" alt="Moment 5">xxxxxxxxxxx
             </div>
             <div class="mx-20">
                 <a href="https://chat.whatsapp.com/KODE_GRUP_WA" target="_blank" class="btn-wa" style="text-decoration:none;">
@@ -184,10 +187,10 @@
         </section>
     </main>
 
-    <!-- FLOATING WHATSAPP BUTTON ADMIN -->
-    <button onclick="hubungiAdmin()" id="floating-wa">
+    <!-- FLOATING WHATSAPP BUTTON ADMIN (100% Anti Error Encoding) -->
+    <a href="https://api.whatsapp.com/send?phone=628979563274&text=Halo%20Admin%20Gabin%20Nusantara!%20%F0%9F%91%8B%E2%9C%A8%0ASaya%20mau%20tanya%20tentang%20menu%20dan%20promo%20Gabin%20Nusantara%2C%20yaa%20%F0%9F%98%8A" target="_blank" id="floating-wa">
         <i class="fab fa-whatsapp"></i>
-    </button>
+    </a>
 
     <!-- FLOATING BOTTOM NAVIGATION -->
     <div class="nav-container">
@@ -216,4 +219,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-<script src="script.js" charset="utf-8"></script>
