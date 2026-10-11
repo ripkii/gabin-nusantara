@@ -38,8 +38,24 @@ h1, h2, h3, h4, .title-gabin, .section-title, .badge-title { font-family: 'Fredo
 
 .glass-card { background: rgba(255, 255, 255, 0.6); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.9); border-radius: 28px; box-shadow: 0 10px 30px rgba(122, 90, 74, 0.08); padding: 25px; }
 .top-header { display: flex; justify-content: center; padding: 40px 20px 10px; }
-.gabin-icon-circle { background: white; border-radius: 50%; width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; box-shadow: 0 15px 35px rgba(255, 123, 137, 0.25); border: 6px solid rgba(255,255,255,0.5);}
-.hero-titles { text-align: center; margin-top: 10px; }
+.gabin-icon-circle { 
+    background: white; 
+    border-radius: 50%; 
+    /* 1. GANTI ANGKA INI buat gedein ukuran keseluruhan logonya */
+    width: 160px; 
+    height: 160px; 
+    
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0 15px 35px rgba(255, 123, 137, 0.25); 
+    
+    /* 2. GANTI ANGKA INI buat nebelin garis luar yang transparan */
+    border: 8px solid rgba(255,255,255,0.6); 
+    
+    /* 3. GANTI ANGKA INI buat nebelin area BINGKAI PUTIH di sekeliling foto */
+    padding: 5px; 
+}.hero-titles { text-align: center; margin-top: 10px; }
 .title-gabin { font-size: 4.2rem; color: #4a2c1b; line-height: 1; letter-spacing: -1px; text-shadow: 2px 2px 0px white;}
 .title-icecream { font-size: 2.8rem; color: #ff7b89; margin-top: -5px; letter-spacing: -1px; text-shadow: 2px 2px 0px white;}
 .subtitle { color: #8c6a58; font-size: 1.05rem; font-weight: 600; margin-top: 10px; }
@@ -165,4 +181,11 @@ textarea:focus, .input-glass:focus { border-color: #ff7b89; background: white; b
     object-fit: cover; /* Mencegah gambar gepeng */
     border: 2px solid white;
     box-shadow: 0 4px 10px rgba(122, 90, 74, 0.15);
+}
+/* --- STYLE LOGO UTAMA BIAR BULAT SEMPURNA --- */
+.rounded-logo {
+    width: 120%;
+    height: 120%;
+    border-radius: 50%; /* Ini kunci bikin logo kotak langsung bulat! */
+    object-fit: cover; /* Biar gambarnya gak gepeng/ketarik saat dipaksa bulat */
 }
