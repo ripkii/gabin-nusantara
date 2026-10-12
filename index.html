@@ -22,14 +22,16 @@
     <main id="app-content">
         <!-- 1. HOME VIEW -->
         <section id="view-home" class="section-view active">
-            <<div class="top-header">
-                <div class="gabin-icon-circle">
-                    <!-- GANTI 'logo-gabin-baru.png' dengan nama file logo lu -->
+            <div class="top-header">
+                <!-- Kita buat background-nya transparan lagi biar logo aslinya tampil maksimal -->
+                <div class="gabin-icon-circle" style="overflow: hidden; padding: 0; display: flex; align-items: center; justify-content: center;">
+                    <!-- GANTI 'logo-gabin-baru.png' dengan nama file logo kotak lu yang baru -->
                     <img src="logo.jpeg" alt="Logo Gabin" class="rounded-logo">
                 </div>
             </div>
+            
             <div class="hero-titles">
-        
+                
             </div>
 
             <div class="glass-card mt-20 hero-card">
@@ -41,7 +43,7 @@
             </div>
         </section>
 
-        <!-- 2. MENU VIEW -->
+        <!-- 2. MENU VIEW (DITAMBAH PRODUCT KNOWLEDGE) -->
         <section id="view-menu" class="section-view">
             <div class="header-section">
                 <span class="badge-title">🌟 Paling Laris</span>
@@ -49,6 +51,7 @@
             </div>
             
             <div class="menu-grid">
+                <!-- List Produk -->
                 <div class="glass-card menu-card">
                     <img src="es teler.jpeg" alt="Es Teler" class="menu-img">
                     <div class="menu-info">
@@ -89,6 +92,135 @@
                     <button class="btn-add" onclick="pesanViaGForm()">Pesan <i class="fas fa-external-link-alt" style="font-size:0.8rem; margin-left:5px;"></i></button>
                 </div>
             </div>
+
+            <!-- ===== BAGIAN PRODUCT KNOWLEDGE ===== -->
+            <div class="header-section mt-40">
+                <h2 class="section-title">Product Knowledge</h2>
+                <p class="subtitle" style="font-size: 0.95rem; margin-top:5px;">Kenali lebih dekat setiap varian Gabin Nusantara! ❤️</p>
+            </div>
+
+            <div class="pk-container">
+                <!-- PK: Es Teler -->
+                <div class="glass-card pk-card">
+                    <img src="es teler.jpeg" alt="Es Teler" class="pk-img">
+                    <div class="pk-info">
+                        <h3>Es Teler</h3>
+                        <p class="pk-desc">Perpaduan rasa manis dan creamy dengan inspirasi dessert es teler khas Indonesia yang menyegarkan.</p>
+                        
+                        <span class="pk-badge">Bahan Utama</span>
+                        <div class="pk-ingredients">
+                            <div class="pk-ing-item"><div class="ing-icon">🥑</div><span class="ing-text">Alpukat</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥥</div><span class="ing-text">Kelapa</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥭</div><span class="ing-text">Nangka</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥛</div><span class="ing-text">Cream</span></div>
+                        </div>
+
+                        <span class="pk-badge"><i class="fas fa-utensils"></i> Karakter Rasa</span>
+                        <p class="pk-char">Manis, creamy, segar</p>
+                    </div>
+                </div>
+
+                <!-- PK: Es Doger -->
+                <div class="glass-card pk-card">
+                    <img src="es doger.jpeg" alt="Es Doger" class="pk-img">
+                    <div class="pk-info">
+                        <h3>Es Doger</h3>
+                        <p class="pk-desc">Cita rasa manis dan creamy yang terinspirasi dari es doger khas Indonesia.</p>
+                        
+                        <span class="pk-badge">Bahan Utama</span>
+                        <div class="pk-ingredients">
+                            <div class="pk-ing-item"><div class="ing-icon">🍠</div><span class="ing-text">Tape</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥥</div><span class="ing-text">Kelapa</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🔴</div><span class="ing-text">Pacar Cina</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥛</div><span class="ing-text">Cream</span></div>
+                        </div>
+
+                        <span class="pk-badge"><i class="fas fa-utensils"></i> Karakter Rasa</span>
+                        <p class="pk-char">Manis, lembut, gurih</p>
+                    </div>
+                </div>
+
+                <!-- PK: Martabak -->
+                <div class="glass-card pk-card">
+                    <img src="martabak.jpeg" alt="Martabak" class="pk-img">
+                    <div class="pk-info">
+                        <h3>Martabak</h3>
+                        <p class="pk-desc">Varian dengan cita rasa cokelat manis dan topping yang melimpah seperti martabak manis.</p>
+                        
+                        <span class="pk-badge">Bahan Utama</span>
+                        <div class="pk-ingredients">
+                            <div class="pk-ing-item"><div class="ing-icon">🍫</div><span class="ing-text">Cokelat</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥜</div><span class="ing-text">Kacang</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥛</div><span class="ing-text">Susu</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🟤</div><span class="ing-text">Meses</span></div>
+                        </div>
+
+                        <span class="pk-badge"><i class="fas fa-utensils"></i> Karakter Rasa</span>
+                        <p class="pk-char">Manis, rich, crunchy</p>
+                    </div>
+                </div>
+
+                <!-- PK: Klepon -->
+                <div class="glass-card pk-card">
+                    <img src="klepon.jpeg" alt="Klepon" class="pk-img">
+                    <div class="pk-info">
+                        <h3>Klepon</h3>
+                        <p class="pk-desc">Terinspirasi dari jajanan tradisional klepon dengan perpaduan rasa manis dan aroma khas pandan.</p>
+                        
+                        <span class="pk-badge">Bahan Utama</span>
+                        <div class="pk-ingredients">
+                            <div class="pk-ing-item"><div class="ing-icon">🌿</div><span class="ing-text">Pandan</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥥</div><span class="ing-text">Kelapa</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🟤</div><span class="ing-text">Gula Merah</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥛</div><span class="ing-text">Cream</span></div>
+                        </div>
+
+                        <span class="pk-badge"><i class="fas fa-utensils"></i> Karakter Rasa</span>
+                        <p class="pk-char">Manis, gurih, aroma pandan</p>
+                    </div>
+                </div>
+
+                <!-- PK: Jasuke -->
+                <div class="glass-card pk-card">
+                    <img src="jasuke.jpeg" alt="Jasuke" class="pk-img">
+                    <div class="pk-info">
+                        <h3>Jasuke</h3>
+                        <p class="pk-desc">Perpaduan rasa jagung manis, susu, dan keju yang creamy dengan sensasi gurih yang menggugah selera.</p>
+                        
+                        <span class="pk-badge">Bahan Utama</span>
+                        <div class="pk-ingredients">
+                            <div class="pk-ing-item"><div class="ing-icon">🌽</div><span class="ing-text">Jagung</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥛</div><span class="ing-text">Susu</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🧀</div><span class="ing-text">Keju</span></div>
+                            <div class="pk-ing-item"><div class="ing-icon">🥛</div><span class="ing-text">Cream</span></div>
+                        </div>
+
+                        <span class="pk-badge"><i class="fas fa-utensils"></i> Karakter Rasa</span>
+                        <p class="pk-char">Manis, gurih, creamy</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- USP Banner Bawah -->
+            <div class="glass-card usp-banner mx-20 mt-20 mb-20">
+                <div class="usp-item">
+                    <div class="usp-icon"><i class="fas fa-leaf"></i></div>
+                    <h4>Bahan Berkualitas</h4>
+                    <p>Menggunakan bahan pilihan</p>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-icon"><i class="fas fa-heart"></i></div>
+                    <h4>Rasa Autentik Nusantara</h4>
+                    <p>Terinspirasi jajanan khas Indonesia</p>
+                </div>
+                <div class="usp-item">
+                    <div class="usp-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Tanpa Pengawet</h4>
+                    <p>Lebih aman & lezat dinikmati</p>
+                </div>
+            </div>
+            <!-- ===== SELESAI PRODUCT KNOWLEDGE ===== -->
+
         </section>
 
         <!-- 3. PROMO VIEW -->
@@ -140,7 +272,7 @@
             </div>
         </section>
 
-        <!-- 5. VOTE VIEW (SUDAH DIUBAH KE NASTAR & KAYU MANIS) -->
+        <!-- 5. VOTE VIEW -->
         <section id="view-vote" class="section-view">
             <div class="header-section">
                 <span class="badge-title">💡 Flavor Lab</span>
@@ -170,11 +302,11 @@
                 <h2 class="section-title">#GabinMoments</h2>
             </div>
             <div class="gallery">
-                <img src="es doger.jpeg" class="foto-moment" alt="Moment 1">
-                <img src="es teler.jpeg" class="foto-moment" alt="Moment 2">
+                <img src="es teler.jpeg" class="foto-moment" alt="Moment 1">
+                <img src="es doger.jpeg" class="foto-moment" alt="Moment 2">
                 <img src="martabak.jpeg" class="foto-moment" alt="Moment 3">
-                <img src="klepon.jpeg" class="foto-moment" alt="Moment 4">
-                <img src="jasuke.jpeg" class="foto-moment" alt="Moment 5">
+                <img src="jasuke.jpeg" class="foto-moment" alt="Moment 3">
+                <img src="klepon.jpeg" class="foto-moment" alt="Moment 3">
             </div>
             <div class="mx-20">
                 <a href="https://forms.gle/w3qqwPwSL7YHoCkd6" target="_blank" class="btn-wa" style="text-decoration:none;">
@@ -184,8 +316,8 @@
         </section>
     </main>
 
-    <!-- FLOATING WHATSAPP BUTTON ADMIN (100% Anti Error Encoding) -->
-    <a href="https://api.whatsapp.com/send?phone=628979563274&text=Halo%20Admin%20Gabin%20Nusantara!%20%F0%9F%91%8B%E2%9C%A8%0ASaya%20mau%20tanya%20tentang%20menu%20dan%20promo%20Gabin%20Nusantara%2C%20yaa%20%F0%9F%98%8A" target="_blank" id="floating-wa">
+    <!-- FLOATING WHATSAPP BUTTON ADMIN -->
+    <a href="https://api.whatsapp.com/send?phone=628979563274&text=Halo%20Admin%20Gabin%20Nusantara!%20%F0%9F%91%8B%E2%9C%A8%0A%0ASaya%20mau%20tanya%20tentang%20menu%20dan%20promo%20Gabin%20Nusantara%2C%20yaa%20%F0%9F%98%8A" target="_blank" id="floating-wa">
         <i class="fab fa-whatsapp"></i>
     </a>
 
