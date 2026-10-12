@@ -20,7 +20,7 @@ function pindahTab(viewId, navId) {
 // --- PEMESANAN VIA GOOGLE FORM ---
 function pesanViaGForm() {
     // ⚠️ Ganti link ini dengan Link Google Form Klien Lu ⚠️
-    const linkGForm = "https://forms.gle/CONTOH_LINK_FORM_KAMU_DISINI";
+    const linkGForm = "https://forms.gle/w3qqwPwSL7YHoCkd6";
     window.open(linkGForm, '_blank');
 }
 

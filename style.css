@@ -1,19 +1,24 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { 
     font-family: 'Plus Jakarta Sans', sans-serif;
-    background: linear-gradient(135deg, #fcead9 0%, #f6ccd6 100%);
+    background: linear-gradient(135deg, #fff5f5 0%, #fcead9 100%); /* Warna dasar dibikin lebih cerah dan soft */
     color: #4a2c1b; 
     min-height: 100vh; 
     overflow-x: hidden; 
     position: relative;
 }
 
+/* Polkadot Pattern yang Lebih Rapi & Estetik (Selang-seling) */
 body::before {
     content: '';
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: radial-gradient(rgba(255, 123, 137, 0.18) 2px, transparent 2px);
-    background-size: 30px 30px;
+    background-image: 
+        radial-gradient(#ff7b89 2px, transparent 2px),
+        radial-gradient(#ff7b89 2px, transparent 2px);
+    background-size: 40px 40px; /* Ukuran jarak antar titik */
+    background-position: 0 0, 20px 20px; /* Bikin polkadotnya selang-seling */
+    opacity: 0.12; /* Transparansi polkadot biar estetik dan ga norak */
     z-index: -2;
     pointer-events: none;
 }
@@ -67,7 +72,7 @@ h1, h2, h3, h4, .title-gabin, .section-title, .badge-title { font-family: 'Fredo
 
 .btn-primary, .btn-wa, .btn-add { border: none; padding: 16px; border-radius: 20px; font-size: 1rem; font-weight: 700; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 8px; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); width: 100%; font-family: 'Plus Jakarta Sans', sans-serif;}
 .btn-primary { background: #4a2c1b; color: white; box-shadow: 0 8px 20px rgba(74, 44, 27, 0.2); }
-.btn-wa { background: #25D366; color: white; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2); }
+.btn-wa { background: #ff7b89; color: white; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2); }
 .btn-primary:active, .btn-wa:active { transform: scale(0.95); }
 
 .toast { visibility: hidden; width: 90%; max-width: 400px; background: #4a2c1b; color: #fff; text-align: center; border-radius: 20px; padding: 18px; position: fixed; z-index: 3000; left: 0; right: 0; margin: 0 auto; bottom: 100px; font-size: 0.95rem; font-weight: 600; opacity: 0; transform: translateY(20px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 15px 30px rgba(74,44,27,0.3); }
